@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
+import * as React from "react";
+import Link from "next/link";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -12,8 +12,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
-
+} from "@/components/ui/navigation-menu";
 
 export default function MenuBar() {
   return (
@@ -33,9 +32,16 @@ export default function MenuBar() {
                       Olfactorian
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                      <b>The world first collaboration hub & creative workspace for perfumery. </b>
-                      <br/> <br/>
-                      <span>Together, we challenge the boundaries.<br/>Together, let's start creating scents! </span>
+                      <b>
+                        The world first collaboration hub & creative workspace
+                        for perfumery.{" "}
+                      </b>
+                      <br /> <br />
+                      <span>
+                        Together, we challenge the boundaries.
+                        <br />
+                        Together, let's start creating scents!{" "}
+                      </span>
                     </p>
                   </a>
                 </NavigationMenuLink>
@@ -43,11 +49,13 @@ export default function MenuBar() {
               <ListItem href="/aromachems" title="Aroma Chemicals">
                 Synthetic building blocks of modern perfumery.
               </ListItem>
-              <ListItem href="/naturals" title="Natural Ingremdients">
-                Nature creations at its finest, infinite inspirations for perfumers.
+              <ListItem href="/naturals" title="Natural Ingredients">
+                Nature creations at its finest, infinite inspirations for
+                perfumers.
               </ListItem>
               <ListItem href="/accords" title="Community Accords">
-                Draw inspiration from existing works and create your own to inspire others.
+                Draw inspiration from existing works and create your own to
+                inspire others.
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -61,29 +69,31 @@ export default function MenuBar() {
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
-  )
+  );
 }
 
-const ListItem = React.forwardRef(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  )
-})
+const ListItem = React.forwardRef(
+  ({ className, title, children, ...props }, ref) => {
+    return (
+      <li>
+        <NavigationMenuLink asChild>
+          <a
+            ref={ref}
+            className={cn(
+              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+              className
+            )}
+            {...props}
+          >
+            <div className="text-sm font-medium leading-none">{title}</div>
+            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+              {children}
+            </p>
+          </a>
+        </NavigationMenuLink>
+      </li>
+    );
+  }
+);
 
-ListItem.displayName = "ListItem"
+ListItem.displayName = "ListItem";

@@ -11,7 +11,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
-export function CollectionCarousel() {
+export default function CollectionCarousel() {
   return (
     <Carousel 
       className="p-8 mx-12" 
@@ -24,7 +24,7 @@ export function CollectionCarousel() {
           <CarouselItem key={index}>
             <div className="p-1">
               <Card>
-                <CardContent className="flex items-center h-80 justify-center p-6">
+                <CardContent className="flex items-center h-96 justify-center p-6">
                   <span className="text-4xl font-semibold">{index + 1}</span>
                 </CardContent>
               </Card>

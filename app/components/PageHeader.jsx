@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 export default function PageHeader() {
   return (
     <header className="flex items-center px-24 h-14 border-b gap-4 lg:h-20">
-      <Link className="flex items-center gap-2 text-lg font-semibold" href="#">
+      <Link className="flex items-center gap-2 text-lg font-semibold" href="/">
         Olfactorian
       </Link>
       <div className="flex-1 min-w-0 hidden md:flex">

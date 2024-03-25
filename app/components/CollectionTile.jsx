@@ -6,7 +6,7 @@ export default function CollectionTile({name, summary, href, imgSrc}) {
   return (
     // <div className="w-[350px] rounded-md border border-gray-200">
         // <div className="w-[350px] p-4 flex items-center justify-center rounded-lg border border-gray-200">
-            <div className="w-[270px] max-w-sm grid gap-2 flex items-center justify-center rounded-lg">
+            <div className="w-[270px] max-w-sm grid gap-2 flex items-center justify-center rounded-lg hover:bg-elevation-2 shadow-elevation-1 duration-200 hover:-translate-y-1 hover:shadow-elevation-2">
                 <Link className="aspect-w-1/1 overflow-hidden rounded-lg" href="#">
                     <img
                         alt="Collection cover"

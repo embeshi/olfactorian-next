@@ -27,7 +27,7 @@ export default function Home() {
         <Separator className="my-4" />
         <div className="relative">
           <ScrollArea>
-            <div className="flex space-x-4 pb-4">
+            <div className="flex space-x-4 py-2">
               {sampleCollections.map(({name, imgSrc}) => (
                 <CollectionTile 
                 key = {name}
